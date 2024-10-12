@@ -56,6 +56,7 @@ public class Solution7 {
         // 第 1 步：将任意交换的结点对输入并查集
         int len = s.length();
         UnionFind unionFind = new UnionFind(len);//修改数组大小
+        //这里的修改是合理的
         for (List<Integer> pair : pairs) {
             int index1 = pair.get(0);
             int index2 = pair.get(1);
@@ -80,6 +81,7 @@ public class Solution7 {
             int root = unionFind.find(i);
             stringBuilder.append(hashMap.get(root).poll());
             //stringBuilder.append(" ");
+            //我认为你这里的修改是合理的，字符串后面不需要增加空格
         }
         return stringBuilder.toString();
     }
